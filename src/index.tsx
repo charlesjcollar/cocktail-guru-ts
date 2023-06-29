@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import SignIn from './components/Auth/SignIn';
 import Main from './routes/Main/Main';
 import Home from './routes/Home/Home';
 import Recipe from './routes/Recipe/Recipe';
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     path: "/recipe/:id",
     element: <Recipe />,
     loader: genericLoader,
+  },
+  {
+    path: "/login",
+    element: <SignIn />
   }
 ]);
 
