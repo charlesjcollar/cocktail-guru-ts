@@ -9,6 +9,8 @@ import Main from './routes/Main/Main';
 import Home from './routes/Home/Home';
 import Recipe from './routes/Recipe/Recipe';
 import {loader as genericLoader} from './utils/react-router-utils'
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './themes/defaultTheme';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
